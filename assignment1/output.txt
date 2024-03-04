@@ -1,0 +1,70 @@
+No sudo permissions found for group admins
+No PROJECT_PATH env variable found
+No shared script folder found in path
+Umask set
+No service account found:appservice
+No user found with username:alicej
+No user found with username:bobsmith
+User found with username:carold
+User found with username:davew
+User found with username:emilys
+Group found:developers
+No group found:readers
+Group found:testers
+Group found:admins
+File found:/project/admins
+File found:/project/developers
+File found:/project/testers
+File found:/project/shared
+File not found:/project/shared/scripts
+File not found:/project/admins/shared.txt
+File not found:/project/testers/shared.txt
+File not found:/project/developers/shared.txt
+No soft link found:/project/admins/scripts
+No soft link found:/project/testers/scripts
+No soft link found:/project/developers/scripts
+User davew is correctly configured to change password
+User emilys is correctly configured to change password
+Wrong password change ferquency found:99999.0
+No password expiry found for user emilys
+Wrong group owner found for folder /project/admins -> root
+Wrong group owner found for folder /project/testers -> root
+Wrong group owner found for folder /project/developers -> root
+Wrong group owner found for folder /project/shared -> root
+Wrong permission found for folder /project/admins -> rwxr-xr-x
+Wrong permission found for folder /project/testers -> rwxr-xr-x
+Wrong permission found for folder /project/shared -> rwxr-xr-x
+Wrong permission found for folder /project/developers -> rwxr-xr-x
+No user name found:Alice Johnson
+No user name found:Bob Smith
+User name found:Carol Danvers
+User name found:Dave Wilson
+User name found:Emily Stark
+Groups for user carold:[carold]
+Error: groups: ‘bobsmith’: no such user
+Error: groups: ‘alicej’: no such user
+Groups for user davew:[davew]
+Groups for user emilys:[emilys]
+Wrong permission found for folder /project/developers -> rwxr-xr-x. Expected:rwxrwx---
+
+
+
+Group memberships:0.0
+Group creation:3.0
+Users full names:3.0
+User creation:3.0
+Service account:0.0
+Sudo config:0.0
+
+Links creation:0.5
+File creation:10.0
+
+SGID Permission:0.0
+File permission:0.0
+File ownership:1.0
+
+Env variables:0.0
+Umask:6.0
+Password expiry:0.0
+Password change frequency:0.0
+Password change on login:3.5
