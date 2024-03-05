@@ -305,7 +305,7 @@ public float getDaysUntilExpiryFromShadow() throws Exception{
            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
            List<String> contents = reader.lines().collect(Collectors.toList());
 	   float grade=0;
-           float inc=1f;
+           float inc=0.5f;
 	   for(String user:users){
 		for(String content:contents){
 		   if(content.startsWith(user+":")){
@@ -415,7 +415,7 @@ public boolean matchesUmask(String content){
    }
    public boolean  hasServiceAccount(List<String> content){
 	for(String user: content){
-              if(user.contains(serviceAccount) && user.contains("/usr/sbin/nologin")){
+              if(user.contains(serviceAccount) && user.contains("/sbin/nologin")){
                  return true;
               }
    	}
