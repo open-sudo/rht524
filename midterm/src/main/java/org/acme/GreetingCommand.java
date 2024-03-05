@@ -38,8 +38,8 @@ import java.io.InputStreamReader;
 public class GreetingCommand implements Runnable {
    String groups[]=new String []{"developers","managers","recruiters","admins"};
    String serviceAccount="appservice";
-   String users[]=new String []{"samsont","janec","paulj","bobsmith","umuewad","davew","emilys"};
-   String names[]=new String []{"Samson Tyler","Jane Connor","Paul Johnson","Bob Smith","Umuewa Danvers","Dave Wilson","Emily Stark"};
+   String users[]=new String []{"samsont","janec","paulj","bobsmith","umuelwad","davew","emilys"};
+   String names[]=new String []{"Samson Tyler","Jane Connor","Paul Johnson","Bob Smith","Umuelwa Danvers","Dave Wilson","Emily Stark"};
 
    String dirs [] = new String []{"/project/admins","/project/developers","/project/managers","/project/shared"};
 
@@ -101,7 +101,7 @@ public List<String> getGroups(String username) throws Exception{
 public float  userGroupMembership() throws Exception{
    float grade=0;
    float inc=0.5f;
-   List<String> gps=getGroups("umuewad");
+   List<String> gps=getGroups("umuelwad");
    if(gps!=null && gps.contains("developers")){
 	grade+=inc;
    }
@@ -255,12 +255,12 @@ public float getDaysUntilExpiryFromShadow() throws Exception{
            List<String> contents = reader.lines().collect(Collectors.toList());
    	   String shadowEntry=null;
 	 for(String content:contents){
-   	 	if(content.startsWith("emilys:")){
+   	 	if(content.startsWith("paulj:")){
 			shadowEntry=content;
 		}
     	  }
          if(shadowEntry==null){
-		System.out.println("No password found for user emilys :(");
+		System.out.println("No password found for user paulj :(");
 	 	return 0; 
 	 }
     String[] fields = shadowEntry.split(":");
@@ -275,12 +275,12 @@ public float getDaysUntilExpiryFromShadow() throws Exception{
             		System.out.println("Correct password expiry found for user emilys:"+days);
 	  		  return grade;
 		}else{
-	    		System.out.println("Wrong password expiry found for user emilys:"+days);
+	    		System.out.println("Wrong password expiry found for user paulj:"+days);
 		}
 
             }
         }else{
-	    		System.out.println("No password expiry found for user emilys");
+	    		System.out.println("No password expiry found for user paulj");
 
 	}
 
@@ -623,7 +623,7 @@ public float sudoGrade() throws Exception{
 		   total+=userCreation;
 		   float groupCreation=groupCreated(contentGrp);	
 		   total+=groupCreation;
-		   float fileCreation=folderCreated(dirs);
+		   float fileCreation=0.85f*folderCreated(dirs);
 		   total+=fileCreation;
 		   float linkCreation=checkSoftLinks(links);
 		   total+=linkCreation;
